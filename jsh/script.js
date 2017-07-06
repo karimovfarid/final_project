@@ -57,7 +57,7 @@ var activeArea = function(id) {
     if (id !== undefined) {
         document.querySelector('#list-' + id).classList.add('is-active');
         document.querySelector('#AZ-' + id).classList.add('is-active');
-
+        console.log($(".is-active")[1]);
     }
 }
 paths.forEach(function(path) {
@@ -120,5 +120,71 @@ $('.main').click(function(e) {
 
         }
 
+    }
+})
+
+//plugin
+$(document).ready(function() {
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            //  margin: 10,
+            responsiveClass: true,
+            autoHeight: true,
+
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                600: {
+                    items: 3,
+                    nav: true,
+                    loop: false
+                },
+                1000: {
+                    items: 4,
+                    nav: true,
+                    loop: false
+                }
+            }
+        })
+    })
+    // inputHome
+$(".inputClick").click(function(e) {
+    var input = $('.inputClick').val();
+    $('.inputLabel').css({ "top": "5px" });
+    if (input == '' && !e.target.closest('.r')) {
+        $('.errorMessage').css({ "display": "block" });
+    }
+    //console.log(e.target.parent());
+
+
+})
+$('.inputClick').ready(function(e) {
+    $("#updateOur").click(function(e) {
+        var input = $('.inputClick').val();
+
+        if (input == '' && !e.target.closest('.r')) {
+            $('.errorMessage').css({ "display": "block" });
+            $('.inputLabel').css({ "top": "" });
+            $('.submit').css({ "background": "#e4e4e4" });
+        }
+        //console.log(e.target.parent());
+
+
+    })
+})
+
+
+// responsiveMenu
+$(".menuRes").click(function() {
+    var widthNav = $(".navBarLeft").width();
+    $(".j").toggleClass("menuResButton");
+    if ($(".j").hasClass("menuResButton")) {
+        $(".navBarLeft").css({ "left": "0" });
+        $(".navUpRes").css({ "left": widthNav });
+    } else {
+        $(".navBarLeft").css({ "left": "" });
+        $(".navUpRes").css({ "left": "" });
     }
 })
