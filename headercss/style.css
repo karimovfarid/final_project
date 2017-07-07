@@ -1232,7 +1232,7 @@
   #winter .line::before,
   #discover .line::before,
   #event .line::before,
-  .map .line::before,
+  #mapApi .line::before,
   #updateOur .line::before {
     width: 50px;
     left: 47%; }
@@ -1244,7 +1244,7 @@
   #winter h2,
   #discover h2,
   #event h2,
-  .map h2,
+  #mapApi h2,
   #updateOur h2 {
     font-size: 30px !important; }
 
@@ -1266,7 +1266,7 @@
   #winter .line::before,
   #discover .line::before,
   #event .line::before,
-  .map .line::before,
+  #mapApi .line::before,
   #updateOur .line::before {
     width: 50px;
     left: 41%; }
@@ -1278,7 +1278,7 @@
   #winter h2,
   #discover h2,
   #event h2,
-  .map h2,
+  #mapApi h2,
   #updateOur h2 {
     font-size: 16px !important; }
 
@@ -1350,29 +1350,79 @@
         line-height: 50px;
         font-size: 2em; }
 
-#imgPart {
+#imgPartCity {
   height: 400px; }
-  #imgPart .img {
+  #imgPartCity .img {
     width: 100%;
     height: 340px;
     background-image: url(../img/133.jpg);
     background-size: cover;
     background-position: center; }
-  #imgPart .col-md-12 {
+  #imgPartCity .col-md-12 {
     box-shadow: 0 2px 4px rgba(5, 6, 6, 0.06);
     height: 60px; }
-    #imgPart .col-md-12 ul {
+    #imgPartCity .col-md-12 ul {
       margin-top: 20px; }
-      #imgPart .col-md-12 ul li {
+      #imgPartCity .col-md-12 ul li {
         float: left;
         margin-right: 30px;
         color: gray; }
-        #imgPart .col-md-12 ul li a {
+        #imgPartCity .col-md-12 ul li a {
           color: red;
           text-decoration: none; }
-      #imgPart .col-md-12 ul li:first-child {
+      #imgPartCity .col-md-12 ul li:first-child {
         list-style: none; }
-      #imgPart .col-md-12 ul li:last-child a {
+      #imgPartCity .col-md-12 ul li:last-child a {
+        color: lightgray; }
+
+#imgPartAze {
+  height: 400px; }
+  #imgPartAze .img {
+    width: 100%;
+    height: 340px;
+    background-image: url(../img/133.jpg);
+    background-size: cover;
+    background-position: center; }
+  #imgPartAze .col-md-12 {
+    box-shadow: 0 2px 4px rgba(5, 6, 6, 0.06);
+    height: 60px; }
+    #imgPartAze .col-md-12 ul {
+      margin-top: 20px; }
+      #imgPartAze .col-md-12 ul li {
+        float: left;
+        margin-right: 30px;
+        color: gray; }
+        #imgPartAze .col-md-12 ul li a {
+          color: red;
+          text-decoration: none; }
+      #imgPartAze .col-md-12 ul li:first-child {
+        list-style: none; }
+      #imgPartAze .col-md-12 ul li:last-child a {
+        color: lightgray; }
+
+#imgPartCousine {
+  height: 400px; }
+  #imgPartCousine .img {
+    width: 100%;
+    height: 340px;
+    background-image: url(../img/cousine.jpg);
+    background-size: cover;
+    background-position: center; }
+  #imgPartCousine .col-md-12 {
+    box-shadow: 0 2px 4px rgba(5, 6, 6, 0.06);
+    height: 60px; }
+    #imgPartCousine .col-md-12 ul {
+      margin-top: 20px; }
+      #imgPartCousine .col-md-12 ul li {
+        float: left;
+        margin-right: 30px;
+        color: gray; }
+        #imgPartCousine .col-md-12 ul li a {
+          color: red;
+          text-decoration: none; }
+      #imgPartCousine .col-md-12 ul li:first-child {
+        list-style: none; }
+      #imgPartCousine .col-md-12 ul li:last-child a {
         color: lightgray; }
 
 @media screen and (max-width: 765px) {
@@ -1483,31 +1533,31 @@
         #destination .maxWidth button {
           display: none; } }
 
-#info .contentCity h1 {
+#infoPage .contentCity h1 {
   font-size: 37px;
   font-weight: 600;
   margin-top: 32px;
   text-align: center; }
-#info .contentCity .col-md-12 {
+#infoPage .contentCity .col-md-12 {
   margin-top: 30px; }
-  #info .contentCity .col-md-12 .col-md-10 p {
+  #infoPage .contentCity .col-md-12 .col-md-10 p {
     font-size: 36px;
     line-height: 46px;
     text-align: center;
     font-weight: 300; }
     @media screen and (max-width: 765px) {
-      #info .contentCity .col-md-12 .col-md-10 p {
+      #infoPage .contentCity .col-md-12 .col-md-10 p {
         text-align: left;
         font-weight: 400;
         font-size: 25px;
         line-height: 34px; } }
-#info .contentCity .myLine {
+#infoPage .contentCity .myLine {
   margin-top: 80px;
   margin-bottom: 80px; }
   @media screen and (max-width: 990px) {
-    #info .contentCity .myLine {
+    #infoPage .contentCity .myLine {
       margin-top: 400px; } }
-  #info .contentCity .myLine .liner {
+  #infoPage .contentCity .myLine .liner {
     width: 20px;
     height: 2px;
     background: black;
