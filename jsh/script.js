@@ -150,18 +150,22 @@ $(document).ready(function() {
         })
     })
     // inputHome
-$(".inputClick").click(function(e) {
+var clickk = false;
+$(".inputClick").click(function(z) {
+    clickk = true;
     var input = $('.inputClick').val();
     $('.inputLabel').css({ "top": "5px" });
-    if (input == '' && !e.target.closest('.r')) {
+    if (input == '' && !z.target.closest('.r')) {
         $('.errorMessage').css({ "display": "block" });
     }
     //console.log(e.target.parent());
 
 
 })
-$('.inputClick').ready(function(e) {
+
+$(document).ready(function(e) {
     $("#updateOur").click(function(e) {
+
         var input = $('.inputClick').val();
 
         if (input == '' && !e.target.closest('.r')) {
