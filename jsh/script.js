@@ -151,33 +151,19 @@ $(document).ready(function() {
     })
     // inputHome
 var clickk = false;
-$(".inputClick").click(function(z) {
+$(".inputClick").focusin(function(z) {
     clickk = true;
     var input = $('.inputClick').val();
     $('.inputLabel').css({ "top": "5px" });
-    if (input == '' && !z.target.closest('.r')) {
-        $('.errorMessage').css({ "display": "block" });
-    }
+    // if (input == '' && !z.target.closest('.r')) {
+    //     $('.errorMessage').css({ "display": "block" });
+    // }
     //console.log(e.target.parent());
 
 
 })
 
-$(document).ready(function(e) {
-    $("#updateOur").click(function(e) {
 
-        var input = $('.inputClick').val();
-
-        if (input == '' && !e.target.closest('.r')) {
-            $('.errorMessage').css({ "display": "block" });
-            $('.inputLabel').css({ "top": "" });
-            $('.submit').css({ "background": "#e4e4e4" });
-        }
-        //console.log(e.target.parent());
-
-
-    })
-})
 
 
 // responsiveMenu
@@ -191,4 +177,18 @@ $(".menuRes").click(function() {
         $(".navBarLeft").css({ "left": "" });
         $(".navUpRes").css({ "left": "" });
     }
+})
+
+$(".inputClick").focusout(function(e) {
+
+    var input = $('.inputClick').val();
+
+    if (input == '' && e.target.closest('.r')) {
+        $('.errorMessage').css({ "display": "block" });
+        $('.inputLabel').css({ "top": "" });
+        $('.submit').css({ "background": "#e4e4e4" });
+    }
+    //console.log(e.target.parent());
+
+
 })
